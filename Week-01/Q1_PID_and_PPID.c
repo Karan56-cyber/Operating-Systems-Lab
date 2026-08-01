@@ -4,15 +4,8 @@
 #include<unistd.h>
 #include<stdio.h>
 int main(){
-    pid_t pid=fork();
-    if(pid<0){
-        printf("Fork failed");
-    }
-    else if(pid==0){
-        printf("The pid of the child is %d \n",getpid());
-    }
-    else{
-        printf("The pid of the parent is %d \n ",getppid());
-    }
+    fork();
+    print("The parent id is %d\n",getppid());
+    print("The child pid is %d\n",getpid());
     return 0;
 }
