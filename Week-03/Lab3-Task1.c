@@ -7,6 +7,7 @@ int main()
 {
     int n, sum = 0;
     int arr[10];
+    int pipefd[2];
 
     printf("Enter number of elements: ");
     scanf("%d", &n);
@@ -16,6 +17,8 @@ int main()
     {
         scanf("%d", &arr[i]);
     }
+
+    pipe(pipefd);
 
     pid_t pid = fork();
 
@@ -27,21 +30,25 @@ int main()
     {
         printf("Current process is Child Process\n");
 
+        close(pipefd[0]);
+
         for (int i = 0; i < n; i++)
         {
             sum = sum + arr[i];
         }
 
         printf("Sum = %d\n", sum);
+        write(pipefd[1], &sum, sizeof(sum));
+        close(pipefd[1]);
     }
     else
     {
+        close(pipefd[1]);
+        read(pipefd[0], &sum, sizeof(sum));
+        close(pipefd[0]);
         wait(NULL);
-
         printf("Current process is Parent Process\n");
-
         int prime = 1;
-
         if (sum < 2)
         {
             prime = 0;
