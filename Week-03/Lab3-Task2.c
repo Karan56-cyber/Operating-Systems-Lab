@@ -1,3 +1,15 @@
+/*
+Lab 3 - Task 2
+
+Problem Statement:
+Write a C program using the fork() system call and pipe for inter-process
+communication. The child process should accept a string from the user,
+calculate its length, and send both the string and its length to the parent
+process through a pipe. The parent process should receive the string and
+generate and display all possible 3-character permutations using different
+characters from the given string. Use wait() to ensure proper synchronization
+between the parent and child processes.
+*/
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
