@@ -1,3 +1,16 @@
+/*
+Lab 5 - Task 2
+
+Problem Statement:
+Write a C program using the fork() system call and pipe for inter-process
+communication. The parent process should create a file with a user-specified
+file name and store the student's Name, Roll Number, and Class in the file.
+The parent process should send the file name to the child process through a
+pipe. The child process should receive the file name, open the file, and
+display the data stored in it. Use wait() to ensure proper synchronization
+between the parent and child processes.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
