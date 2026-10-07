@@ -1,3 +1,15 @@
+/*
+Lab 4 - Task 1
+
+Problem Statement:
+Write a C program using the fork() system call and pipe for inter-process
+communication. The child process should accept a string from the user and
+send the entered data to the parent process through a pipe. The parent
+process should receive the data from the pipe and display the received
+message. Use wait() to ensure proper synchronization between the parent and
+child processes.
+*/
+
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/types.h>
