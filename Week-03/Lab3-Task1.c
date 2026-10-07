@@ -1,3 +1,16 @@
+/*
+Lab 3 - Task 1
+
+Problem Statement:
+Write a C program using the fork() system call and pipe for inter-process
+communication. The child process should calculate the sum of all elements
+of an integer array entered by the user and send the calculated sum to the
+parent process through a pipe. The parent process should receive the sum and
+check whether the sum is a prime number or not. Display the sum and the
+corresponding prime/non-prime result. Use wait() to ensure proper
+synchronization between the parent and child processes.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
