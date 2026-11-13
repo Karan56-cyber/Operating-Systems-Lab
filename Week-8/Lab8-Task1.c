@@ -1,3 +1,11 @@
+// Shared Memory Implementation using System V IPC in C
+
+// * Demonstrates Inter-Process Communication (IPC) using shared memory.
+// * Creates a shared memory segment using shmget().
+// * Attaches the segment using shmat().
+// * Writes and displays a message in shared memory.
+// * Detaches the shared memory using shmdt().
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
