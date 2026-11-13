@@ -1,3 +1,17 @@
+//LRU (Least Recently Used) Page Replacement Algorithm in C++
+// This program simulates the LRU Page Replacement Algorithm used in Operating Systems for memory management.
+// * Takes the page reference string and frame capacity as input.
+// * Initializes memory frames as empty.
+// * Checks whether each requested page is already present in memory (Page Hit).
+// * If the page is not present, a Page Fault occurs.
+// * If an empty frame is available, the new page is inserted.
+// * If all frames are occupied, the least recently used page is replaced.
+// * Uses timestamps to track the most recent access of each page.
+// * Displays the frame contents after every page reference.
+// * Calculates and displays the total number of page faults.
+
+Time Complexity: O(n × capacity)
+Space Complexity: O(n + capacity)
 #include <iostream>
 using namespace std;
 
